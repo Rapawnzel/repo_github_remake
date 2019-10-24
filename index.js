@@ -10,6 +10,7 @@ function main(){
         document.querySelector("#username").innerHTML = userObj["login"];
         document.querySelector("#name").innerHTML = userObj["name"];
         document.querySelector("#bio").innerHTML = userObj["bio"];
+        document.querySelector("#repos").innerHTML = "Repositories";
         httpGet(userObj["repos_url"], 
             (repos) => {
                 let repoList = JSON.parse(repos);
